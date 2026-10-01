@@ -139,7 +139,7 @@ export default function PledgeModal({ isOpen, onClose }) {
 
               <div className="p-4 bg-[#EAE7E2]/60 rounded-xl text-xs text-[#6B635B] flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#9E7B66] shrink-0" />
-                <span>Your pledge supports PEEC's e-waste monitoring baseline in the Philippines[cite: 1].</span>
+                <span>Your pledge supports PEEC's e-waste monitoring baseline in the Philippines.</span>
               </div>
 
               <button
