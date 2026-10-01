@@ -115,7 +115,7 @@ export default function ActionDropOff({ onOpenPledge }) {
                 Locate an E-Waste Drop-off Bin
               </h3>
               <p className="text-sm text-[#6B635B] mt-1">
-                Find nearby certified recycling hubs across Metro Manila, Visayas, and Mindanao[cite: 1].
+                Find nearby certified recycling hubs across Metro Manila, Visayas, and Mindanao.
               </p>
             </div>
 
