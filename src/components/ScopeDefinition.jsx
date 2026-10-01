@@ -44,7 +44,7 @@ export default function ScopeDefinition() {
             </div>
 
             <p className="text-stone-300 text-base leading-relaxed font-sans max-w-2xl">
-              Electronic waste (e-waste), formally termed Waste Electrical and Electronic Equipment (WEEE), encompasses discarded smartphones, laptops, household appliances, power cords, and electronic accessories that have reached their end-of-life or software support window.
+              Electronic waste (e-waste), also called Waste Electrical and Electronic Equipment (WEEE), includes smartphones, laptops, household appliances, power cords and other electronic accessories once they are discarded without the intent of reuse.
             </p>
           </div>
         </div>
