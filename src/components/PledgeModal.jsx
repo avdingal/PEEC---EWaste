@@ -167,7 +167,7 @@ export default function PledgeModal({ isOpen, onClose }) {
             </h3>
 
             <p className="text-xs text-[#6B635B] mb-6">
-              You are officially recorded as an E-Waste Champion with PEEC Initiative[cite: 1].
+              You are officially recorded as an E-Waste Champion with PEEC Initiative.
             </p>
 
             {/* Digital Certificate Card */}
@@ -188,7 +188,7 @@ export default function PledgeModal({ isOpen, onClose }) {
 
               <div className="text-[10px] text-stone-400 pt-2 border-t border-white/10 flex justify-between">
                 <span>Date: {new Date().toLocaleDateString()}</span>
-                <span>PEEC Initiative PH[cite: 1]</span>
+                <span>PEEC Initiative PH</span>
               </div>
             </div>
 
