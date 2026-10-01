@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="inline-flex items-center gap-2 p-3 bg-[#38332E] border border-white/10 rounded-2xl text-xs text-stone-300">
               <Globe className="w-4 h-4 text-[#D4A373] shrink-0" />
               <span>
-                <strong>PEEC Initiative</strong> — People and the Earth's Ecosystem[cite: 1]
+                <strong>PEEC Initiative</strong> — People and the Earth's Ecosystem
               </span>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Footer() {
                   Citations & Academic Resources[cite: 1]
                 </div>
                 <div className="text-xs text-stone-400">
-                  {showReferences ? 'Hide' : 'Expand'} PEEC research studies, UN reports, and government DENR baseline data[cite: 1].
+                  {showReferences ? 'Hide' : 'Expand'} PEEC research studies, UN reports, and government DENR baseline data.
                 </div>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
           <div className="flex items-center gap-2">
-            <span>© {new Date().getFullYear()} PEEC Initiative — People and the Earth's Ecosystem[cite: 1].</span>
+            <span>© {new Date().getFullYear()} PEEC Initiative — People and the Earth's Ecosystem.</span>
           </div>
 
           <button
