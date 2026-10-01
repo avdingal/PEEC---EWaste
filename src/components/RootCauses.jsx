@@ -95,7 +95,7 @@ export default function RootCauses() {
             </h3>
 
             <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
-              Rapid OS update drop-offs and mandatory digital coursework mean students are forced into frequent hardware upgrades. Old phones become unviable for modern apps, turning into e-waste despite physical hardware integrity[cite: 1].
+              Rapid OS update drop-offs and mandatory digital coursework mean students are forced into frequent hardware upgrades. Old phones become unviable for modern apps, turning into e-waste despite physical hardware integrity.
             </p>
           </div>
 
