@@ -64,7 +64,7 @@ export default function ActionDropOff({ onOpenPledge }) {
           </h2>
 
           <p className="text-base sm:text-lg text-[#524941] font-sans leading-relaxed">
-            Every household can reduce e-waste through three simple habits: extending hardware lifespans, donating functional gear, and using certified collection bins[cite: 1].
+            Every household can reduce e-waste through three simple habits: extending hardware lifespans, donating functional gear, and using certified collection bins.
           </p>
         </div>
 
