@@ -187,12 +187,12 @@ export default function Hero({ onOpenPledge }) {
                 The Philippines E-Waste Baseline
               </h2>
               <p className="text-sm text-[#6B635B]">
-                Key metrics based on PEEC Initiative research & national waste monitoring data[cite: 1].
+                Key metrics based on PEEC Initiative research & national waste monitoring data.
               </p>
             </div>
             <div className="hidden sm:flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#9E7B66] bg-[#9E7B66]/10 px-3.5 py-1.5 rounded-full border border-[#9E7B66]/20">
               <Info className="w-3.5 h-3.5" />
-              PEEC Data 2022–2026[cite: 1]
+              PEEC Data 2022–2026
             </div>
           </div>
 
