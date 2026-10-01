@@ -33,7 +33,7 @@ export default function RealWorldImpacts() {
           </h2>
 
           <p className="text-base text-[#524941] font-sans leading-relaxed">
-            When electronics end up in open dumpsites or informal burning pits, toxic contaminants damage fragile ecosystems, trigger chemical fires, and compromise public health[cite: 1].
+            When electronics end up in open dumpsites or informal burning pits, toxic contaminants damage fragile ecosystems, trigger chemical fires, and compromise public health.
           </p>
         </div>
 
@@ -116,7 +116,7 @@ export default function RealWorldImpacts() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#22201D]/90 via-[#22201D]/20 to-transparent flex flex-col justify-end p-6 text-white">
               <div className="text-xs font-bold uppercase tracking-widest text-[#D4A373] mb-1">
-                PEEC Impact Field Evidence[cite: 1]
+                PEEC Impact Field Evidence
               </div>
               <div className="font-serif-heading text-2xl font-bold">
                 {activeTab.title}
