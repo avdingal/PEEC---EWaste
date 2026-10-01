@@ -35,7 +35,7 @@ export default function ScopeDefinition() {
               </div>
               <div>
                 <span className="text-xs font-bold uppercase tracking-widest text-[#D4A373]">
-                  Core Definition[cite: 1]
+                  Core Definition
                 </span>
                 <h3 className="font-serif-heading text-2xl sm:text-3xl font-bold text-white mt-1">
                   Any discarded device with a battery or plug
@@ -44,7 +44,7 @@ export default function ScopeDefinition() {
             </div>
 
             <p className="text-stone-300 text-base leading-relaxed font-sans max-w-2xl">
-              Electronic waste (e-waste), formally termed Waste Electrical and Electronic Equipment (WEEE), encompasses discarded smartphones, laptops, household appliances, power cords, and electronic accessories that have reached their end-of-life or software support window[cite: 1].
+              Electronic waste (e-waste), formally termed Waste Electrical and Electronic Equipment (WEEE), encompasses discarded smartphones, laptops, household appliances, power cords, and electronic accessories that have reached their end-of-life or software support window.
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function ScopeDefinition() {
                 WEEE Classification Focus
               </h3>
               <p className="text-sm text-[#6B635B]">
-                Explore WEEE categories with special emphasis on Category 6 small telecommunications gear[cite: 1].
+                Explore WEEE categories with special emphasis on Category 6 small telecommunications gear.
               </p>
             </div>
 
@@ -90,7 +90,7 @@ export default function ScopeDefinition() {
                 {selectedCat.highlighted && (
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#D4A373]/20 border border-[#D4A373]/40 rounded-full text-xs font-extrabold text-[#7A542A] uppercase tracking-wider mb-4">
                     <AlertCircle className="w-3.5 h-3.5" />
-                    High Accumulation Priority Category[cite: 1]
+                    High Accumulation Priority Category
                   </div>
                 )}
 
@@ -142,7 +142,7 @@ export default function ScopeDefinition() {
 
               {selectedCat.id === 'cat6' && (
                 <div className="p-4 bg-[#9E7B66]/10 border border-[#9E7B66]/30 rounded-2xl text-xs text-[#524941]">
-                  <strong className="text-[#22201D]">Why Category 6 matters:</strong> Small IT & telecommunications items (under 50cm) like chargers and smartphones represent the fastest compounding e-waste due to short 12-24 month upgrade cycles[cite: 1].
+                  <strong className="text-[#22201D]">Why Category 6 matters:</strong> Small IT & telecommunications items (under 50cm) like chargers and smartphones represent the fastest compounding e-waste due to short 12-24 month upgrade cycles.
                 </div>
               )}
             </div>
