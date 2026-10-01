@@ -70,7 +70,7 @@ export default function PledgeModal({ isOpen, onClose }) {
             </h3>
 
             <p className="text-sm text-[#524941] mb-6 font-sans">
-              Join thousands of advocates taking responsibility for unused smartphones, cables, and electronics sitting in drawers[cite: 1].
+              Join thousands of advocates taking responsibility for unused smartphones, cables, and electronics sitting in drawers.
             </p>
 
             {/* Form */}
