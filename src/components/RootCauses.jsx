@@ -33,7 +33,7 @@ export default function RootCauses() {
           </div>
 
           <p className="text-base text-[#524941] max-w-md font-sans leading-relaxed">
-            Examining why functional or near-functional electronics end up in trash heaps faster than ever[cite: 1].
+            Examining why functional or near-functional electronics end up in trash heaps faster than ever.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export default function RootCauses() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#D4A373]/20 border border-[#D4A373]/40 rounded-full text-xs font-bold text-[#D4A373] uppercase tracking-wider mb-4">
               <GraduationCap className="w-4 h-4" />
-              Demographic Vulnerability Spotlight[cite: 1]
+              Demographic Vulnerability Spotlight
             </div>
 
             <h3 className="font-serif-heading text-2xl sm:text-3xl font-bold text-white mb-3">
@@ -104,7 +104,7 @@ export default function RootCauses() {
               18–24
             </div>
             <div className="text-xs font-medium text-stone-300">
-              Age bracket with fastest device replacement rate[cite: 1]
+              Age bracket with fastest device replacement rate
             </div>
           </div>
         </div>
