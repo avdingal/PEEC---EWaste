@@ -30,29 +30,29 @@ export const WEEE_CATEGORIES = [
     id: 'cat6',
     name: 'Category 6: Small IT & Telecom',
     highlighted: true,
-    size: '< 50 cm',
-    examples: ['Smartphones', 'Charging Cables', 'Earbuds', 'Routers', 'Power Banks', 'Smartwatches'],
+    size: '50 cm or less',
+    examples: ['Smartphones', 'Charging Cables', 'Routers', 'Power Banks', 'Smartwatches'],
     description: 'Small devices under 50cm that accumulate rapidly in homes due to fast upgrade cycles and brief support windows.',
     impactScore: 'High Accumulation',
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'cat2',
-    name: 'Category 2: Small Household Appliances',
+    name: 'Category 5: Small Equipment',
     highlighted: false,
-    size: '< 50 cm',
-    examples: ['Vacuum Cleaners', 'Toasters', 'Electric Toothbrushes', 'Hair Dryers', 'Electric Shavers'],
-    description: 'Everyday appliances with non-replaceable heating coils or sealed battery compartments.',
+    size: '50 cm or less',
+    examples: ['Vacuum Cleaners', 'Toasters', 'Electric Toothbrushes', 'Hair Dryers', 'Electric Shavers', 'Earphones', 'E-Readers'],
+    description: 'Small equipment with no external dimension over 50cm.',
     impactScore: 'Medium Accumulation',
-    image: 'https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=800&q=80'
+    image: 'https://images.unsplash.com/photo-1618506408870-64d8bec48248?auto=format&fit=crop&w=1200&q=80'
   },
   {
     id: 'cat3',
-    name: 'Category 3: IT Screens & Monitors',
+    name: 'Category 2: Screens & Monitors',
     highlighted: false,
-    size: 'Variable',
-    examples: ['Laptops', 'Tablets', 'Desktop Monitors', 'E-Readers'],
-    description: 'Devices with display panels containing valuable display metals as well as heavy metal solder.',
+    size: 'Screen over 100cm²',
+    examples: ['Laptops', 'Tablets', 'Monitors', 'Televisions'],
+    description: 'Screens, monitors and equipment containing screens larger than 100 cm².',
     impactScore: 'High Resource Loss',
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80'
   },
@@ -60,9 +60,9 @@ export const WEEE_CATEGORIES = [
     id: 'cat1',
     name: 'Category 1: Temperature Exchange',
     highlighted: false,
-    size: '> 50 cm',
-    examples: ['Refrigerators', 'Air Conditioners', 'Freezers'],
-    description: 'Large cooling equipment containing ozone-depleting refrigerants requiring specialized extraction.',
+    size: 'No size limit',
+    examples: ['Refrigerators', 'Air Conditioners', 'Freezers'. 'Dehumidifiers'],
+    description: 'Cooling and heating equipment that contains refrigerants requiring specialized handling.',
     impactScore: 'Hazardous Waste',
     image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80'
   }
