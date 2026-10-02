@@ -75,7 +75,7 @@ export const ROOT_CAUSES = [
     description: 'Brief hardware update cycles and rapid software drop-off force early device retirement, disproportionately straining students and budget users.',
     stat: '2.5 Years',
     statLabel: 'Avg. Smartphone Use',
-    icon: 'Clock'
+    icon: 'Clock',
     url: 'https://ewastemonitor.info/the-global-e-waste-monitor-2024/',
   },
   {
@@ -84,7 +84,7 @@ export const ROOT_CAUSES = [
     description: 'Glued battery housings, proprietary pentalobe screws, and paired components force consumers into buying new devices instead of fixing existing ones.',
     stat: '78%',
     statLabel: 'Deemed Unrepairable',
-    icon: 'Wrench'
+    icon: 'Wrench',
     url: 'https://openrepair.org/repair-data/open-repair-alliance-repair-data-for-2025-over-400000-items-logged/',
   },
   {
@@ -93,7 +93,7 @@ export const ROOT_CAUSES = [
     description: 'Rapid tech adoption, remote learning/work needs, and multiple device ownership accelerate the accumulation of obsolete hardware per household.',
     stat: '3.4 Devices',
     statLabel: 'Per Urban Household',
-    icon: 'Smartphone'
+    icon: 'Smartphone',
     url: 'https://psa.gov.ph/statistics/population-and-housing/node/1684059979',
   },
   {
@@ -102,7 +102,7 @@ export const ROOT_CAUSES = [
     description: 'Minimal accessible drop-off centers, absence of municipal curbside e-waste sorting, and low public awareness lead to electronics sitting forgotten in drawers or tossed in general trash.',
     stat: '< 15%',
     statLabel: 'Formally Recycled',
-    icon: 'Trash2'
+    icon: 'Trash2',
     url: 'https://bantoxics.org/2024/10/14/iwas-ewaste-infographic/',
   }
 ];
