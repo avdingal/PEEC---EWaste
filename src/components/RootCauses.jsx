@@ -37,61 +37,66 @@ export default function RootCauses() {
           </p>
         </div>
 
-        {/* 4 Card Grid matching reference layout cards */}
+        {/* 4 Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {ROOT_CAUSES.map((cause, index) => (
-            <div
-              key={cause.id}
-              className="group relative bg-[#FAF8F5] hover:bg-white border border-[#D8D3CA] hover:border-[#9E7B66] p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
-            >
-              <div>
-                {/* Top Badge & Metric pill */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-[#EAE7E2] group-hover:bg-[#22201D] group-hover:text-white flex items-center justify-center transition-colors duration-300">
-                    {getCauseIcon(cause.icon)}
+          {ROOT_CAUSES.map((cause, index) => {
+            const linkTarget = cause.sourceUrl || cause.url;
+
+            return (
+              <div
+                key={cause.id}
+                className="group relative bg-[#FAF8F5] hover:bg-white border border-[#D8D3CA] hover:border-[#9E7B66] p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  {/* Top Badge & Metric pill */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-[#EAE7E2] group-hover:bg-[#22201D] group-hover:text-white flex items-center justify-center transition-colors duration-300">
+                      {getCauseIcon(cause.icon)}
+                    </div>
+
+                    <div className="text-right">
+                      <div className="font-serif-heading text-2xl font-bold text-[#22201D]">
+                        {cause.stat}
+                      </div>
+                      <div className="text-[11px] font-semibold text-[#6B635B] uppercase tracking-wider">
+                        {cause.statLabel}
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="text-right">
-                    <div className="font-serif-heading text-2xl font-bold text-[#22201D]">
-                      {cause.stat}
-                    </div>
-                    <div className="text-[11px] font-semibold text-[#6B635B] uppercase tracking-wider">
-                      {cause.statLabel}
-                    </div>
-                  </div>
+                  {/* Card Title & Content */}
+                  <h3 className="font-serif-heading text-2xl sm:text-3xl font-bold text-[#22201D] mb-4 group-hover:text-[#9E7B66] transition-colors">
+                    {cause.title}
+                  </h3>
+
+                  <p className="text-base text-[#524941] leading-relaxed font-sans mb-6">
+                    {cause.description}
+                  </p>
                 </div>
 
-                {/* Card Title & Content */}
-                <h3 className="font-serif-heading text-2xl sm:text-3xl font-bold text-[#22201D] mb-4 group-hover:text-[#9E7B66] transition-colors">
-                  {cause.title}
-                </h3>
+                {/* Card Footer Tag with Clickable External Link */}
+                <div className="pt-4 border-t border-[#EAE7E2] flex items-center justify-between text-xs font-semibold text-[#6B635B] relative z-10">
+                  <span>Driver 0{index + 1}</span>
 
-                <p className="text-base text-[#524941] leading-relaxed font-sans mb-6">
-                  {cause.description}
-                </p>
+                  {linkTarget ? (
+                    <a
+                      href={linkTarget}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-[#9E7B66] hover:text-[#22201D] hover:underline underline-offset-4 transition-colors cursor-pointer py-1 px-2 -mr-2"
+                    >
+                      <span>Read Impact</span>
+                      <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </a>
+                  ) : (
+                    <span className="flex items-center gap-1 text-[#9E7B66]">
+                      Read Impact <ArrowUpRight className="w-3.5 h-3.5" />
+                    </span>
+                  )}
+                </div>
               </div>
-
-              {/* Card Footer Tag with Clickable External Link */}
-              <div className="pt-4 border-t border-[#EAE7E2] flex items-center justify-between text-xs font-semibold text-[#6B635B]">
-                <span>Driver 0{index + 1}</span>
-                {cause.sourceUrl ? (
-                  <a
-                    href={cause.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group/link flex items-center gap-1 text-[#9E7B66] hover:text-[#22201D] hover:underline underline-offset-4 transition-colors cursor-pointer"
-                  >
-                    <span>Read Impact</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                  </a>
-                ) : (
-                  <span className="flex items-center gap-1 text-[#9E7B66]">
-                    Read Impact <ArrowUpRight className="w-3.5 h-3.5" />
-                  </span>
-                )}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Highlight Callout: Student Impact Spotlight */}
