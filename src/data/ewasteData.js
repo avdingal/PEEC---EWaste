@@ -61,7 +61,7 @@ export const WEEE_CATEGORIES = [
     name: 'Category 1: Temperature Exchange',
     highlighted: false,
     size: 'No size limit',
-    examples: ['Refrigerators', 'Air Conditioners', 'Freezers'. 'Dehumidifiers'],
+    examples: ['Refrigerators', 'Air Conditioners', 'Freezers', 'Dehumidifiers'],
     description: 'Cooling and heating equipment that contains refrigerants requiring specialized handling.',
     impactScore: 'Hazardous Waste',
     image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80'
