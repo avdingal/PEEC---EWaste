@@ -76,6 +76,7 @@ export const ROOT_CAUSES = [
     stat: '2.5 Years',
     statLabel: 'Avg. Smartphone Use',
     icon: 'Clock'
+    url: 'https://ewastemonitor.info/the-global-e-waste-monitor-2024/',
   },
   {
     id: 'repair',
@@ -84,6 +85,7 @@ export const ROOT_CAUSES = [
     stat: '78%',
     statLabel: 'Deemed Unrepairable',
     icon: 'Wrench'
+    url: 'https://openrepair.org/repair-data/open-repair-alliance-repair-data-for-2025-over-400000-items-logged/',
   },
   {
     id: 'demand',
@@ -92,6 +94,7 @@ export const ROOT_CAUSES = [
     stat: '3.4 Devices',
     statLabel: 'Per Urban Household',
     icon: 'Smartphone'
+    url: 'https://psa.gov.ph/statistics/population-and-housing/node/1684059979',
   },
   {
     id: 'collection',
@@ -100,6 +103,7 @@ export const ROOT_CAUSES = [
     stat: '< 15%',
     statLabel: 'Formally Recycled',
     icon: 'Trash2'
+    url: 'https://bantoxics.org/2024/10/14/iwas-ewaste-infographic/',
   }
 ];
 
