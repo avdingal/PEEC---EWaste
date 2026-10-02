@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import BrandLogo from './BrandLogo';
 import { REFERENCES } from '../data/ewasteData';
-import { ChevronDown, ChevronUp, BookOpen, ArrowUp, Globe, Heart } from 'lucide-react';
+import { ChevronDown, ChevronUp, BookOpen, ArrowUp, Globe, Heart, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
   const [showReferences, setShowReferences] = useState(false);
@@ -94,9 +94,24 @@ export default function Footer() {
                   <div className="font-bold text-[#D4A373] mb-1">
                     {ref.citation}
                   </div>
-                  <div className="font-semibold text-white mb-1">
-                    "{ref.title}"
-                  </div>
+                  
+                  {/* Clickable link that opens in a new tab */}
+                  {ref.url ? (
+                    <a
+                      href={ref.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-1.5 font-semibold text-white hover:text-[#D4A373] transition-colors mb-1 underline decoration-stone-600 hover:decoration-[#D4A373] underline-offset-4"
+                    >
+                      <span>"{ref.title}"</span>
+                      <ExternalLink className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 shrink-0" />
+                    </a>
+                  ) : (
+                    <div className="font-semibold text-white mb-1">
+                      "{ref.title}"
+                    </div>
+                  )}
+
                   <div className="text-stone-400 mb-1">
                     Authors: {ref.authors}
                   </div>
