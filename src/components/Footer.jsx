@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import BrandLogo from './BrandLogo';
 import { REFERENCES } from '../data/ewasteData';
-import { ChevronDown, ChevronUp, BookOpen, ArrowUp, Globe, Heart, ExternalLink } from 'lucide-react';
+import { ChevronDown, ChevronUp, BookOpen, ArrowUp, Globe, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
   const [showReferences, setShowReferences] = useState(false);
@@ -68,7 +68,7 @@ export default function Footer() {
         <div className="py-8 border-b border-stone-800">
           <button
             onClick={() => setShowReferences(!showReferences)}
-            className="w-full flex items-center justify-between p-4 bg-[#2A2723] hover:bg-[#332F2A] rounded-2xl border border-white/5 text-left transition-colors"
+            className="w-full flex items-center justify-between p-4 bg-[#2A2723] hover:bg-[#332F2A] rounded-2xl border border-white/5 text-left transition-colors cursor-pointer"
           >
             <div className="flex items-center gap-3">
               <BookOpen className="w-5 h-5 text-[#D4A373]" />
@@ -88,24 +88,26 @@ export default function Footer() {
           </button>
 
           {showReferences && (
-            <div className="mt-4 p-6 bg-[#1A1816] rounded-2xl border border-white/5 space-y-4 animate-fadeIn">
+            <div className="mt-4 p-6 bg-[#1A1816] rounded-2xl border border-white/5 space-y-4">
               {REFERENCES.map((ref) => (
                 <div key={ref.id} className="text-xs text-stone-300 border-b border-stone-800/80 pb-4 last:border-none last:pb-0">
                   <div className="font-bold text-[#D4A373] mb-1">
                     {ref.citation}
                   </div>
                   
-                  {/* Clickable link that opens in a new tab */}
+                  {/* Clickable Title opening in a new tab */}
                   {ref.url ? (
-                    <a
-                      href={ref.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group inline-flex items-center gap-1.5 font-semibold text-white hover:text-[#D4A373] transition-colors mb-1 underline decoration-stone-600 hover:decoration-[#D4A373] underline-offset-4"
-                    >
-                      <span>"{ref.title}"</span>
-                      <ExternalLink className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 shrink-0" />
-                    </a>
+                    <div className="mb-1">
+                      <a
+                        href={ref.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-1.5 font-semibold text-white hover:text-[#D4A373] transition-colors underline decoration-stone-600 hover:decoration-[#D4A373] underline-offset-4"
+                      >
+                        <span>"{ref.title}"</span>
+                        <ExternalLink className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100 shrink-0 text-[#D4A373]" />
+                      </a>
+                    </div>
                   ) : (
                     <div className="font-semibold text-white mb-1">
                       "{ref.title}"
@@ -127,13 +129,13 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
           <div className="flex flex-col gap-1 text-center sm:text-left">
-          <span>© {new Date().getFullYear()} PEEC Initiative – Milestone 1: What's the Issue? MO-ENV076 H2101 People and the Earth's Ecosystem.</span>
-          <span className="text-stone-300 font-medium">Marc Denise Cuizon, Ron Carlos Ramos, Alany Vhriane Dingal, Ysha Rose Beatrice Hubilla</span>
-        </div>
+            <span>© {new Date().getFullYear()} PEEC Initiative – Milestone 1: What's the Issue? MO-ENV076 H2101 People and the Earth's Ecosystem.</span>
+            <span className="text-stone-300 font-medium">Marc Denise Cuizon, Ron Carlos Ramos, Alany Vhriane Dingal, Ysha Rose Beatrice Hubilla</span>
+          </div>
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 px-4 py-2 bg-[#38332E] hover:bg-[#47413B] text-white rounded-full transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#38332E] hover:bg-[#47413B] text-white rounded-full transition-colors cursor-pointer"
           >
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5" />
