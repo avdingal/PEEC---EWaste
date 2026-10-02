@@ -112,7 +112,8 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
           <div className="flex items-center gap-2">
-            <span>© {new Date().getFullYear()} PEEC Initiative — People and the Earth's Ecosystem.</span>
+            <span>© {new Date().getFullYear()} PEEC Initiative — Milestone 1: What's the Issue? MO-ENV076 H2101 People and the Earth's Ecosystem.</span>
+          </span> Marc Denise Quizon. Ron Carlos Ramos, Alany Vhriane Dingal, Ysha Rose Beatrcie Hubilla
           </div>
 
           <button
