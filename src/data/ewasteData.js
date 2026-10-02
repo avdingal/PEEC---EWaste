@@ -271,9 +271,10 @@ export const REFERENCES = [
   {
     id: 'ref1',
     citation: '[1] PEEC Initiative E-Waste Report (2022-2026)',
-    title: 'Assessment of Electronic Waste Generation, Small IT Equipment Accumulation, and Disposal Patterns in the Philippines.',
+    title: 'Assessment of Electronic Waste Generation, Small IT Equipment Accumulation, and Disposal  Patterns in the Philippines.',
     authors: 'People and the Earth\'s Ecosystem (PEEC) Advocacy Research Group',
     details: 'Comprehensive study quantifying national e-waste metrics (537 million kg in 2022), ASEAN rankings, and WEEE Category 6 telecommunications drop-off deficits.'
+    url: 'https://google.com'
   },
   {
     id: 'ref2',
@@ -281,6 +282,7 @@ export const REFERENCES = [
     title: 'Global E-waste Monitor 2024: Quantity, Flows, and the Circular Economy Potential.',
     authors: 'United Nations Institute for Training and Research (UNITAR) & International Telecommunication Union (ITU)',
     details: 'International benchmark report detailing per-capita e-waste growth, precious metal recovery rates, and toxic release pathways.'
+    url: 'https://www.itu.int/en/ITU-D/Environment/Pages/Publications/The-Global-E-waste-Monitor-2024.aspx'
   },
   {
     id: 'ref3',
@@ -288,5 +290,6 @@ export const REFERENCES = [
     title: 'Revised Procedures and Standards for the Management of Hazardous Wastes (including WEEE).',
     authors: 'Department of Environment and Natural Resources (DENR), Republic of the Philippines',
     details: 'Regulatory guidelines defining waste electrical and electronic equipment categories, hazardous handling rules, and treatment facility standards.'
+    url: 'https://eeci.ph/wp-content/uploads/2021/03/DENR_DAO-2013-22-Revised-Standards-for-Hazardous-Wastes.pdf'
   }
 ];
