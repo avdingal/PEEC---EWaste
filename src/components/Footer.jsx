@@ -22,7 +22,7 @@ export default function Footer() {
             <BrandLogo showText={true} className="brightness-125" />
             
             <p className="text-sm text-stone-300 leading-relaxed max-w-md font-sans">
-              "E-waste aotm" is an advocacy awareness campaign dedicated to transforming electronic waste disposal habits through public education and accessible collection infrastructure[cite: 1].
+              "E-waste aotm" is an advocacy awareness campaign dedicated to transforming electronic waste disposal habits through public education and accessible collection infrastructure.
             </p>
 
             {/* PEEC Initiative Mandate Note */}
@@ -74,7 +74,7 @@ export default function Footer() {
               <BookOpen className="w-5 h-5 text-[#D4A373]" />
               <div>
                 <div className="text-sm font-bold text-white">
-                  Citations & Academic Resources[cite: 1]
+                  Citations & Academic Resources
                 </div>
                 <div className="text-xs text-stone-400">
                   {showReferences ? 'Hide' : 'Expand'} PEEC research studies, UN reports, and government DENR baseline data.
