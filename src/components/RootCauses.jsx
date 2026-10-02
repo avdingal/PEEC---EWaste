@@ -71,12 +71,24 @@ export default function RootCauses() {
                 </p>
               </div>
 
-              {/* Card Footer Tag */}
+              {/* Card Footer Tag with Clickable External Link */}
               <div className="pt-4 border-t border-[#EAE7E2] flex items-center justify-between text-xs font-semibold text-[#6B635B]">
                 <span>Driver 0{index + 1}</span>
-                <span className="group-hover:translate-x-1 transition-transform flex items-center gap-1 text-[#9E7B66]">
-                  Read Impact <ArrowUpRight className="w-3.5 h-3.5" />
-                </span>
+                {cause.sourceUrl ? (
+                  <a
+                    href={cause.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/link flex items-center gap-1 text-[#9E7B66] hover:text-[#22201D] hover:underline underline-offset-4 transition-colors cursor-pointer"
+                  >
+                    <span>Read Impact</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                  </a>
+                ) : (
+                  <span className="flex items-center gap-1 text-[#9E7B66]">
+                    Read Impact <ArrowUpRight className="w-3.5 h-3.5" />
+                  </span>
+                )}
               </div>
             </div>
           ))}
