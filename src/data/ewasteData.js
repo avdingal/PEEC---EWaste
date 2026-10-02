@@ -278,7 +278,7 @@ export const REFERENCES = [
     title: 'Assessment of Electronic Waste Generation, Small IT Equipment Accumulation, and Disposal  Patterns in the Philippines.',
     authors: 'People and the Earth\'s Ecosystem (PEEC) Advocacy Research Group',
     details: 'Comprehensive study quantifying national e-waste metrics (537 million kg in 2022), ASEAN rankings, and WEEE Category 6 telecommunications drop-off deficits.',
-    url: 'https://google.com',
+    url: 'https://docs.google.com/document/d/1_tZS4bSRa6sshDskslvQBIlS1Pqe-CLC1V64yIuH1D4/edit?usp=sharing',
   },
   {
     id: 'ref2',
