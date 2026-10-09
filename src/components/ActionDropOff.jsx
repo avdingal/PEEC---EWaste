@@ -160,6 +160,7 @@ export default function ActionDropOff({ onOpenPledge }) {
               >
                 <option value="All">All Philippines Hubs</option>
                 <option value="NCR">NCR / Metro Manila</option>
+                <option value="Luzon">Luzon</option>
                 <option value="Visayas">Visayas</option>
                 <option value="Mindanao">Mindanao</option>
               </select>
