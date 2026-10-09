@@ -532,9 +532,9 @@ export const DROP_OFF_LOCATIONS = [
   {
     id: 27,
     name: 'SM City East Ortigas E-Waste Drop Box',
-    address: '2F, Cyberzone near Flasher, SM City East Ortigas, Cainta, Rizal',
-    city: 'Cainta, Rizal',
-    region: 'Luzon',
+    address: '2F, Cyberzone near Flasher, SM City East Ortigas, Pasig',
+    city: 'Pasig, Metro Manila',
+    region: 'NCR',
     type: 'Mall Drop-off',
     acceptedItems: ['Old or Broken Phones', 'Phone Chargers', 'Power Cords', 'Batteries', 'Earphones/Earbuds', 'Calculators', 'Printer Ink & Toner', 'Small Gadgets', 'Computer Wiring'],
     hours: '10:00 AM - 9:00 PM Daily',
