@@ -169,33 +169,54 @@ export const IMPACTS = [
 export const ACTION_STEPS = [
   {
     number: '01',
-    title: 'Refurbishing',
-    description: 'Replace aging batteries, upgrade software, or fix cracked screens before writing off functional tech.',
-    actionText: 'Find Repair Guides',
+    title: 'Refurbishing & IT Asset Disposition (ITAD)',
+    description: 'Extends device lifespans through testing, secure data-wiping, and component-level repairs (screens, batteries) via formal ITAD facilities (like Envirocycle) and the DENR-UNIDO project, keeping toxic heavy metals out of landfills.',
+    currentStatus: 'Operates through formal ITAD facilities (like Envirocycle) and a large informal repair market. While DENR policies (RA 6969, DAO 2013-22) regulate hazardous waste, national programs like the DENR-EMB and UNIDO Sustainable Electronics Management Project scale up repair and reuse—though formal refurbishment remains concentrated in commercial IT assets.',
+    procedure: 'Decommissioned electronics undergo functional and cosmetic testing. Viable units undergo secure software data wiping, component-level repairs (e.g., screen or battery replacement), cleaning, and re-grading for resale or donation. Non-repairable sub-components are routed to accredited recyclers for material recovery.',
+    effects: 'Extends electronics lifespans, keeps toxic heavy metals out of landfills, and provides affordable reconditioned technology.',
+    assessment: 'Highly effective and feasible circular economy solution. In 2024 alone, Philippine climate-tech asset refurbishing diverted over 250,000 kg of e-waste (equivalent to nearly 116,300 laptops) from landfills.',
+    actionText: 'Find Repair & ITAD Info',
     icon: 'Wrench'
   },
   {
     number: '02',
-    title: 'Government Policy and Regulations (RA 6969, RA 9003, DENR DAO 2013-22)',
-    description: 'DAO 2013-22 sets the procedures for managing hazardous waste, and importers need clearance from DENR-EMB',
-    actionText: '',
-    icon: 'HeartHandshake'
-  },
-  {
-    number: '03',
-    title: 'Utilize Certified Drop-offs',
-    description: 'Major corporations dedicated e-waste collection bins nationwide. Hundreds of drop-off points operate in SM malls, telco hubs (Globe, Smart/PLDT), and university campuses nationwide.',
+    title: 'Drop-off Points for E-Waste',
+    description: 'Major corporations operate dedicated e-waste collection bins nationwide—including over 120 Globe collection points and 88 SM Supermalls & Cyberzone hubs—where consumers can deposit phones, cables, chargers, and small electronics.',
+    currentStatus: 'Hundreds of drop-off points operate nationwide across 88 SM Supermalls/Cyberzone locations, over 120 Globe stores, Smart/PLDT hubs, and university campuses.',
+    procedure: 'Consumers deposit phones, cables, chargers, and small electronics into secured bins during routine trips. Logistics partners collect and transport items to central holding facilities.',
+    effects: 'Increases public awareness and integrates hazardous waste disposal into routine shopping mall trips through convenient bins and incentives.',
+    assessment: 'Effective at making disposal convenient at scale, but relies on voluntary participation and public awareness. Because only 91 registered facilities in the country handle e-waste, collection is only truly sustainable when items reach accredited recyclers.',
     actionText: 'Find Bins Below',
     icon: 'MapPin'
   },
-  {    
-    number: '04',
-    title: 'Trade-in Programs',
-    description: 'Trade-in programs lets customers turn an old working device into a discount, bill credit, or GCash payout.',
-    actionText: '',
-    icon: ''
+  {
+    number: '03',
+    title: 'Government Policy & Regulations (RA 6969, RA 9003, DAO 2013-22)',
+    description: 'DAO 2013-22 sets procedures for managing hazardous waste under RA 6969 and RA 9003, requiring importers and handling facilities to secure clearance and registration from DENR-EMB.',
+    currentStatus: 'No standalone law specifically covers e-waste, relying instead on guidelines under RA 9003 and RA 6969. Since March 2025, 234 containers of suspected e-waste were illegally shipped to Subic.',
+    procedure: 'DAO 2013-22 sets the procedures for managing hazardous waste. Importers require clearance from DENR-EMB, and handling facilities must be formally registered with DENR-EMB.',
+    effects: 'Only 91 registered facilities handle e-waste compared to the 537 million kg generated in 2022, and illegal shipments highlight ongoing enforcement gaps.',
+    assessment: 'Only partly effective. While agencies are cooperating to address smuggling and hazardous waste, a dedicated e-waste law, stronger enforcement, and more accredited treatment facilities are urgently needed.',
+    actionText: 'View DENR Guidelines',
+    icon: 'HeartHandshake'
   },
+  {
+    number: '04',
+    title: 'Device Trade-in Programs',
+    description: 'Programs from Samsung PH and Globe let customers exchange old, working devices (phones, tablets, watches) for instant purchase discounts, postpaid bill credits, or GCash payouts after diagnostic checks and data wiping.',
+    currentStatus: 'Available nationwide through Samsung PH (deducts value from a new device for residents 18+) and Globe Trade-In (offers bill credits for postpaid users or GCash payouts for others). Only working phones, tablets, and watches are accepted.',
+    procedure: 'Customers describe the old device condition (must power on, hold a charge, and be factory reset with no account lock) for an estimate. After physical verification, signing an acknowledgment form, and secure data wiping, the value is applied as a discount, bill credit, or GCash payout.',
+    effects: 'Provides a clear financial reward to clear out idle working devices stuck in households.',
+    assessment: 'Effective at incentivizing returns, but not entirely sustainable as discounts can encourage premature upgrades. Programs also lack public Philippine volume data and transparency on whether traded-in units are refurbished or routed to accredited recyclers.',
+    actionText: 'Explore Trade-Ins',
+    icon: 'RefreshCw' // Note: If RefreshCw isn't imported in ActionDropOff.jsx, use 'Smartphone' or 'Coins'
+  }
 ];
+
+export const SOLUTIONS_SYNTHESIS = {
+  summary: 'The four assessments agree on a pattern: existing solutions are accessible and already running, but they depend on voluntary participation and a formal recycling system (only 91 registered facilities) that is still too small to solve the problem alone.',
+  takeaway: 'Refurbishing is the strongest circular solution, collection and trade-in programs are convenient but only as good as the recycling that follows, and policy remains the weakest link. Across all four, the Philippines needs stronger recycling infrastructure, clearer legislation, and greater transparency.'
+};
 
 export const DROP_OFF_LOCATIONS = [
   {
