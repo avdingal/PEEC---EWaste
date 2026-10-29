@@ -209,7 +209,7 @@ export const ACTION_STEPS = [
     effects: 'Provides a clear financial reward to clear out idle working devices stuck in households.',
     assessment: 'Effective at incentivizing returns, but not entirely sustainable as discounts can encourage premature upgrades. Programs also lack public Philippine volume data and transparency on whether traded-in units are refurbished or routed to accredited recyclers.',
     actionText: 'Explore Trade-Ins',
-    icon: 'RefreshCw'
+    icon: 'Smartphone'
   }
 ];
 
