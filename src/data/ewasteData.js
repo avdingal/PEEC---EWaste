@@ -169,25 +169,32 @@ export const IMPACTS = [
 export const ACTION_STEPS = [
   {
     number: '01',
-    title: 'Repair & Extend First',
+    title: 'Refurbishing',
     description: 'Replace aging batteries, upgrade software, or fix cracked screens before writing off functional tech.',
     actionText: 'Find Repair Guides',
     icon: 'Wrench'
   },
   {
     number: '02',
-    title: 'Donate Working Devices',
-    description: 'Pass along functional laptops, phones, and chargers to students or community centers in need.',
-    actionText: 'Locate Donation Partners',
+    title: 'Government Policy and Regulations (RA 6969, RA 9003, DENR DAO 2013-22)',
+    description: 'DAO 2013-22 sets the procedures for managing hazardous waste, and importers need clearance from DENR-EMB',
+    actionText: '',
     icon: 'HeartHandshake'
   },
   {
     number: '03',
     title: 'Utilize Certified Drop-offs',
-    description: 'Never toss battery-powered devices into household trash. Take them to designated e-waste collection bins.',
+    description: 'Major corporations dedicated e-waste collection bins nationwide. Hundreds of drop-off points operate in SM malls, telco hubs (Globe, Smart/PLDT), and university campuses nationwide.',
     actionText: 'Find Bins Below',
     icon: 'MapPin'
-  }
+  },
+  {    
+    number: '04',
+    title: 'Trade-in Programs',
+    description: 'Trade-in programs lets customers turn an old working device into a discount, bill credit, or GCash payout.',
+    actionText: '',
+    icon: ''
+  },
 ];
 
 export const DROP_OFF_LOCATIONS = [
