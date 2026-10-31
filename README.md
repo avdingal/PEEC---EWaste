@@ -10,7 +10,7 @@
 
 * **Live Advocacy Platform:** <a href="https://avdingal.github.io/PEEC---EWaste/" target="_blank" rel="noopener noreferrer">PEEC Initiative E-Waste Website</a>
 * **Milestone 1 Support Document:** <a href="https://docs.google.com/document/d/1_tZS4bSRa6sshDskslvQBIlS1Pqe-CLC1V64yIuH1D4/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View Milestone 1 on Google Docs</a>
-* **Milestone 2 Support Document:** <a href="https://docs.google.com/document/d/1B6F6E6z3iCq_W5K5_sample_placeholder/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View Milestone 2 Evaluating Solutions Worksheet</a>
+* **Milestone 2 Support Document:** <a href="[https://docs.google.com/document/d/1B6F6E6z3iCq_W5K5_sample_placeholder/edit?usp=sharing](https://docs.google.com/document/d/1mtS0v091O1FoRCXDyMxdr0ezseyNFt6RUdNDqVoaRTI/edit?usp=sharing)" target="_blank" rel="noopener noreferrer">View Milestone 2 Evaluating Solutions Worksheet</a>
 
 ---
 
