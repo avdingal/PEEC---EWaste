@@ -68,8 +68,8 @@ export default function ActionDropOff({ onOpenPledge }) {
           </p>
         </div>
 
-        {/* 3 Action Tips Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        {/* 4 Action Tips Cards */}
+        <div className="grid grid-cols-1 md:grid 2-cols-4 gap-8 mb-20">
           {ACTION_STEPS.map((step) => (
             <div
               key={step.number}
