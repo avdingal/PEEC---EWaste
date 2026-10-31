@@ -129,7 +129,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
           <div className="flex flex-col gap-1 text-center sm:text-left">
-            <span>© {new Date().getFullYear()} PEEC Initiative – Milestone 1: What's the Issue? MO-ENV076 H2101 People and the Earth's Ecosystem.</span>
+            <span>© {new Date().getFullYear()} PEEC Initiative – Milestone 2: Evaluating Solutions — MO-ENV076 H2101 People and the Earth's Ecosystem.</span>
             <span className="text-stone-300 font-medium">Marc Denise Cuizon, Ron Carlos Ramos, Alany Vhriane Dingal, Ysha Rose Beatrice Hubilla</span>
           </div>
 

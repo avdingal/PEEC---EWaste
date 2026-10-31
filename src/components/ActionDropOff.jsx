@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ACTION_STEPS, DROP_OFF_LOCATIONS } from '../data/ewasteData';
 import { 
   Search, 
   MapPin, 
   Wrench, 
-  HeartHandshake, 
+  ShieldCheck,
+  Repeat,
+  FileText,
+  CheckCircle2,
+  AlertCircle,
   Clock, 
   Phone, 
   Building2, 
@@ -12,7 +16,8 @@ import {
   ExternalLink, 
   Sparkles,
   Copy,
-  Check
+  Check,
+  X
 } from 'lucide-react';
 
 export default function ActionDropOff({ onOpenPledge }) {
@@ -20,12 +25,35 @@ export default function ActionDropOff({ onOpenPledge }) {
   const [selectedRegion, setSelectedRegion] = useState('All');
   const [selectedLocation, setSelectedLocation] = useState(DROP_OFF_LOCATIONS[0]);
   const [copiedId, setCopiedId] = useState(null);
+  const [activeModalSolution, setActiveModalSolution] = useState(null);
+
+  // ESC key and body scroll lock for solution evaluation modal
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setActiveModalSolution(null);
+      }
+    };
+
+    if (activeModalSolution) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [activeModalSolution]);
 
   const getActionIcon = (iconName) => {
     switch (iconName) {
       case 'Wrench': return <Wrench className="w-6 h-6 text-[#9E7B66]" />;
-      case 'HeartHandshake': return <HeartHandshake className="w-6 h-6 text-[#9E7B66]" />;
+      case 'ShieldCheck': return <ShieldCheck className="w-6 h-6 text-[#9E7B66]" />;
       case 'MapPin': return <MapPin className="w-6 h-6 text-[#9E7B66]" />;
+      case 'Repeat': return <Repeat className="w-6 h-6 text-[#9E7B66]" />;
       default: return <MapPin className="w-6 h-6 text-[#9E7B66]" />;
     }
   };
@@ -73,7 +101,8 @@ export default function ActionDropOff({ onOpenPledge }) {
           {ACTION_STEPS.map((step) => (
             <div
               key={step.number}
-              className="bg-[#FAF8F5] border border-[#D8D3CA] p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              onClick={() => setActiveModalSolution(step)}
+              className="bg-[#FAF8F5] border border-[#D8D3CA] p-8 rounded-[2rem] shadow-sm hover:shadow-xl hover:border-[#9E7B66] transition-all duration-300 flex flex-col justify-between group cursor-pointer"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
@@ -85,18 +114,18 @@ export default function ActionDropOff({ onOpenPledge }) {
                   </div>
                 </div>
 
-                <h3 className="font-serif-heading text-2xl font-bold text-[#22201D] mb-3">
+                <h3 className="font-serif-heading text-2xl font-bold text-[#22201D] mb-3 group-hover:text-[#9E7B66] transition-colors">
                   {step.title}
                 </h3>
 
                 <p className="text-sm text-[#524941] leading-relaxed font-sans mb-6">
-                  {step.description}
+                  {step.shortDescription || step.description}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#EAE7E2] flex items-center justify-between text-xs font-bold text-[#9E7B66]">
-                <span>{step.actionText}</span>
-                <div className="w-2 h-2 rounded-full bg-[#9E7B66]" />
+              <div className="pt-4 border-t border-[#EAE7E2] flex items-center justify-between text-xs font-bold text-[#9E7B66] group-hover:text-[#22201D] transition-colors">
+                <span>{step.actionText || 'Evaluate Solution →'}</span>
+                <div className="w-2 h-2 rounded-full bg-[#9E7B66] group-hover:bg-[#22201D] transition-colors" />
               </div>
             </div>
           ))}
@@ -318,6 +347,158 @@ export default function ActionDropOff({ onOpenPledge }) {
         </div>
 
       </div>
+
+      {/* Solution Evaluation Modal Dialog */}
+      {activeModalSolution && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-sm animate-fadeIn"
+          onClick={() => setActiveModalSolution(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="solution-modal-title"
+        >
+          <div 
+            className="bg-[#1F1D1A] border border-[#D4A373]/30 text-[#EAE7E2] w-full max-w-3xl rounded-[2.25rem] p-6 sm:p-8 shadow-2xl relative overflow-hidden max-h-[90vh] flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="flex items-start justify-between gap-4 pb-6 border-b border-[#38332E]">
+              <div className="flex items-center gap-4">
+                <div className="p-3.5 bg-[#2A2723] border border-[#D4A373]/30 rounded-2xl text-[#D4A373] shrink-0">
+                  {getActionIcon(activeModalSolution.icon)}
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="text-[11px] font-mono font-bold tracking-widest text-[#D4A373] uppercase bg-[#D4A373]/10 px-2.5 py-0.5 rounded-full border border-[#D4A373]/20">
+                      Solution {activeModalSolution.number}
+                    </span>
+                    <span className="text-xs text-[#9E7B66] font-semibold">
+                      Milestone 2 Evaluation
+                    </span>
+                  </div>
+                  <h3 id="solution-modal-title" className="font-serif-heading text-2xl sm:text-3xl font-bold text-white">
+                    {activeModalSolution.title}
+                  </h3>
+                </div>
+              </div>
+
+              <button
+                onClick={() => setActiveModalSolution(null)}
+                className="p-2.5 text-stone-400 hover:text-white hover:bg-[#38332E] rounded-full transition-colors shrink-0 cursor-pointer"
+                aria-label="Close modal dialog"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Scrollable Content Sections */}
+            <div className="overflow-y-auto pr-2 space-y-6 pt-6 font-sans flex-grow">
+              
+              {/* Short Summary Banner */}
+              <div className="p-4 bg-[#2A2723] rounded-2xl border border-white/5 text-sm text-[#D8D3CA] leading-relaxed">
+                {activeModalSolution.shortDescription || activeModalSolution.description}
+              </div>
+
+              {/* 1. Current Status */}
+              <div>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#D4A373] mb-2">
+                  <FileText className="w-4 h-4 text-[#D4A373]" />
+                  <span>Current Status in the Philippines</span>
+                </div>
+                <p className="text-sm text-[#D8D3CA] leading-relaxed pl-6 border-l-2 border-[#D4A373]/40">
+                  {activeModalSolution.currentStatus}
+                </p>
+              </div>
+
+              {/* 2. Procedure / Implementation */}
+              <div>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#D4A373] mb-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#D4A373]" />
+                  <span>Procedure & Implementation Steps</span>
+                </div>
+                <div className="text-sm text-[#D8D3CA] leading-relaxed pl-6 border-l-2 border-[#D4A373]/40 space-y-2 whitespace-pre-line">
+                  {activeModalSolution.procedure}
+                </div>
+              </div>
+
+              {/* 3. Effect & Results */}
+              <div>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#D4A373] mb-2">
+                  <Sparkles className="w-4 h-4 text-[#D4A373]" />
+                  <span>Observed Outcomes & Metrics</span>
+                </div>
+                <p className="text-sm text-[#D8D3CA] leading-relaxed pl-6 border-l-2 border-[#D4A373]/40">
+                  {activeModalSolution.effect}
+                </p>
+              </div>
+
+              {/* 4. Assessment & Feasibility */}
+              <div>
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#D4A373] mb-3">
+                  <ShieldCheck className="w-4 h-4 text-[#D4A373]" />
+                  <span>Part 2: Sustainability, Feasibility & Limitations</span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pl-6 border-l-2 border-[#D4A373]/40">
+                  <div className="p-4 bg-[#2A2723] rounded-2xl border border-white/5">
+                    <div className="text-xs font-bold text-[#D4A373] uppercase tracking-wide mb-1.5 flex items-center gap-1.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                      Sustainability
+                    </div>
+                    <p className="text-xs text-stone-300 leading-relaxed">
+                      {activeModalSolution.assessment?.sustainability || activeModalSolution.assessment}
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-[#2A2723] rounded-2xl border border-white/5">
+                    <div className="text-xs font-bold text-[#D4A373] uppercase tracking-wide mb-1.5 flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-[#D4A373] shrink-0" />
+                      Feasibility
+                    </div>
+                    <p className="text-xs text-stone-300 leading-relaxed">
+                      {activeModalSolution.assessment?.feasibility}
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-[#2A2723] rounded-2xl border border-white/5">
+                    <div className="text-xs font-bold text-[#D4A373] uppercase tracking-wide mb-1.5 flex items-center gap-1.5">
+                      <AlertCircle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                      Limitations
+                    </div>
+                    <p className="text-xs text-stone-300 leading-relaxed">
+                      {activeModalSolution.assessment?.limitations}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* 5. References */}
+              <div className="pt-2 border-t border-[#38332E]">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#9E7B66] mb-1.5">
+                  <FileText className="w-3.5 h-3.5 text-[#9E7B66]" />
+                  <span>References & In-Text Citations</span>
+                </div>
+                <p className="text-xs text-stone-400 italic">
+                  {activeModalSolution.sources}
+                </p>
+              </div>
+
+            </div>
+
+            {/* Modal Footer */}
+            <div className="pt-5 border-t border-[#38332E] mt-4 flex items-center justify-between">
+              <span className="text-xs text-stone-400">
+                MO-ENV076 Week 7 & 8 Worksheet
+              </span>
+              <button
+                onClick={() => setActiveModalSolution(null)}
+                className="px-5 py-2.5 bg-[#D4A373] hover:bg-[#c29363] text-[#1F1D1A] font-bold text-xs rounded-xl transition-colors shadow-md cursor-pointer"
+              >
+                Close Evaluation
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

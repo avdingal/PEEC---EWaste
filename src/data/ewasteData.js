@@ -168,33 +168,77 @@ export const IMPACTS = [
 
 export const ACTION_STEPS = [
   {
+    id: 'refurbishing',
     number: '01',
-    title: 'Refurbishing',
-    description: 'Replace aging batteries, upgrade software, or fix cracked screens before writing off functional tech.',
-    actionText: 'Find Repair Guides',
-    icon: 'Wrench'
+    title: 'Refurbishing & Hardware Life Extension',
+    shortDescription: 'Repairing, upgrading, and sanitizing working IT equipment to extend useful life and divert e-waste from landfills.',
+    description: 'Repairing, upgrading, and sanitizing working IT equipment to extend useful life and divert e-waste from landfills.',
+    actionText: 'Evaluate Solution →',
+    icon: 'Wrench',
+    currentStatus: 'In the Philippines, electronics refurbishment operates across both informal repair centers (such as Greenhills, Raon, and local repair shops) and emerging commercial/NGO IT asset disposition initiatives. While informal shops handle screen and battery replacements for millions of consumers, UNIDO and private enterprise partnerships have begun formalizing certified enterprise IT equipment refurbishment, extending laptop and desktop service lives for educational institutions and community learning hubs.',
+    procedure: '1. Hardware Triage & Diagnostics: Initial visual inspection, battery health check, and modular component testing.\n2. Component Repair & Upgrades: Replacing failing batteries, broken screens, damaged charging ports, and upgrading mechanical hard drives to solid-state drives (SSDs) with RAM expansions.\n3. Certified Data Sanitization: Secure multi-pass data wiping adhering to DoD 5220.22-M or NIST 800-88 standards to safeguard privacy.\n4. Cleaning & Re-casing: Deep chassis cleaning, thermal paste re-application, and component reassembly.\n5. Stress Testing & Quality Assurance: Rigorous benchmarking of thermal levels, battery longevity, and OS stability prior to redistribution.',
+    effect: 'Diverted over 250,000 kg of e-waste (nearly 116,300 laptops) from landfills in 2024 through formal commercial IT asset recovery programs [8]. Extends operational lifespan of electronics by 3 to 5 years, reducing lifecycle carbon emissions by 70% to 80% compared to manufacturing new units [2, 8]. Provides affordable computing access to students and low-income households.',
+    assessment: {
+      sustainability: 'Extremely high circular economy rating. Preserves embodied energy and prevents virgin mining of precious metals (gold, copper, lithium) by maintaining existing hardware in closed functional loops.',
+      feasibility: 'High technical feasibility for desktop PCs and modular laptops. Moderately low for modern smartphones that feature adhesive-sealed enclosures, soldered RAM/storage, and software-locked serialized parts.',
+      limitations: 'Absence of Philippine Right-to-Repair legislation allows manufacturers to withhold schematic diagrams and original replacement parts. High cost of OEM batteries and screens pushes technicians toward substandard counterfeit parts, posing fire hazards.'
+    },
+    sources: 'Philippine Daily Inquirer & UNIDO (2025) [8]; UN Global E-waste Monitor (2024) [2]; PEEC Initiative Research Report (2022-2026) [1]'
   },
   {
+    id: 'government-policy',
     number: '02',
     title: 'Government Policy and Regulations (RA 6969, RA 9003, DENR DAO 2013-22)',
-    description: 'DAO 2013-22 sets the procedures for managing hazardous waste, and importers need clearance from DENR-EMB',
-    actionText: '',
-    icon: 'HeartHandshake'
+    shortDescription: 'National statutory controls, hazardous waste registration, TSD facility accreditation, and customs border interdiction against illegal dumping.',
+    description: 'National statutory controls, hazardous waste registration, TSD facility accreditation, and customs border interdiction against illegal dumping.',
+    actionText: 'Evaluate Solution →',
+    icon: 'ShieldCheck',
+    currentStatus: 'WEEE management in the Philippines is anchored by Republic Act 6969 (Toxic Substances and Hazardous and Nuclear Wastes Control Act), RA 9003 (Ecological Solid Waste Management Act), and DENR Administrative Order (DAO) 2013-22, which categorizes e-waste under hazardous waste classifications (e.g., M506 for electrical/electronic assemblies). While statutory definitions are clear, Extended Producer Responsibility (EPR under RA 11898) currently mandates plastic packaging but has yet to incorporate mandatory take-back targets for electrical equipment.',
+    procedure: '1. Hazardous Waste Generator Registration: Institutional producers of WEEE must register with the DENR Environmental Management Bureau (EMB).\n2. Online Manifest & Permit Tracking: Hazardous waste transport requires Hazardous Waste Manifest tracking and permit-to-transport certificates.\n3. Treatment, Storage, and Disposal (TSD) Accreditation: Recyclers must pass stringent environmental compliance audits to earn DENR Category A-E TSD certifications.\n4. Border Inspection & Customs Interdiction: Joint Bureau of Customs (BOC) and DENR task forces monitor ports to halt illegal transboundary shipments of scrap electronics under the Basel Convention.',
+    effect: 'Established uniform technical guidelines for handling leaded CRT glass, mercury backlights, and cadmium batteries [3]. Inter-agency operations in Subic Bay successfully intercepted 234 illegal shipping containers of misdeclared e-waste since 2025 [4]. However, formal processing capacity remains limited: only 91 registered facilities nationwide handle hazardous e-waste against 537 million kg generated annually [5].',
+    assessment: {
+      sustainability: 'Provides the indispensable institutional and legal backbone required to establish polluter-pays accountability, prevent open burning, and enforce environmental standards.',
+      feasibility: 'Moderate feasibility. Policy mechanisms exist on paper, but LGU municipal level enforcement and DENR-EMB regional monitoring resources are constrained by inadequate testing facilities and budget allocations.',
+      limitations: 'WEEE is currently excluded from mandatory EPR quotas. The informal scrap sector (bakal-bote and informal backyard dismantling) operates largely undetected outside regulatory oversight, leaving informal workers vulnerable to toxic exposure.'
+    },
+    sources: 'DENR Administrative Order No. 2013-22 [3]; Daily Tribune (2026) [4]; BAN Toxics Iwas E-Waste Assessment (2024) [5]; PEEC Initiative Research Report (2022-2026) [1]'
   },
   {
+    id: 'certified-dropoffs',
     number: '03',
-    title: 'Utilize Certified Drop-offs',
-    description: 'Major corporations dedicated e-waste collection bins nationwide. Hundreds of drop-off points operate in SM malls, telco hubs (Globe, Smart/PLDT), and university campuses nationwide.',
-    actionText: 'Find Bins Below',
-    icon: 'MapPin'
+    title: 'Certified Drop-off Bins & Dedicated Collection',
+    shortDescription: 'Accessible drop boxes in high-footfall shopping malls, telecom hubs, and universities linked to accredited TSD recyclers.',
+    description: 'Accessible drop boxes in high-footfall shopping malls, telecom hubs, and universities linked to accredited TSD recyclers.',
+    actionText: 'Evaluate Solution →',
+    icon: 'MapPin',
+    currentStatus: 'Voluntary corporate-led drop-off programs represent the most visible e-waste collection mechanism in Philippine urban centers. Notable initiatives include SM Cares / SM Cyberzone drop boxes across 88 SM Supermalls nationwide, Globe Telecom\'s E-Waste Zero program operating 120+ drop locations, and select Ayala Malls depots. These bins accept small consumer IT equipment, cables, and batteries for certified recovery.',
+    procedure: '1. Strategic Bin Placement: Tamper-resistant, clearly-labeled collection bins deployed in high-footfall commercial areas (e.g. Cyberzone corridors, telco stores).\n2. Public Drop-off: Consumers deposit small electronics (smartphones, cables, power banks, chargers, remotes).\n3. Reverse Logistics Consolidation: Contracted logistics providers securely collect and transport accumulated items to central warehouses.\n4. TSD Depollution & Dismantling: Accredited recyclers (e.g., Envirocycle, IRI) manually disassemble devices, isolate hazardous lithium batteries/mercury components, and shred circuit boards for smelting.',
+    effect: 'Active bins installed across 88 SM Supermalls nationwide [6]; Globe E-Waste Zero has safely collected and diverted hundreds of metric tons of toxic electronic scrap from landfills and municipal waterways since inception [7]. Provides the public with an accessible, no-cost alternative to municipal trash disposal.',
+    assessment: {
+      sustainability: 'High environmental sustainability for targeted devices. Guarantees that hazardous heavy metals, brominated flame retardants, and lithium cells are kept out of municipal landfills and water tables.',
+      feasibility: 'Very high operational feasibility within metropolitan centers (NCR, Metro Cebu, Davao) with dense mall foot-traffic and established corporate retail partners.',
+      limitations: 'Strict physical limitation: drop boxes cannot accept medium or large appliances (WEEE Categories 1, 2, and 4 like TVs, refrigerators, and washing machines). Collection points remain heavily concentrated in urban areas, leaving rural provincial municipalities without certified disposal channels. Bins occasionally suffer from general municipal trash contamination.'
+    },
+    sources: 'Manila Bulletin & SM Cares (2025) [6]; Globe Telecom Sustainability Newsroom (2025) [7]; BAN Toxics (2024) [5]; PEEC Initiative Research Report (2022-2026) [1]'
   },
-  {    
+  {
+    id: 'trade-in',
     number: '04',
-    title: 'Trade-in Programs',
-    description: 'Trade-in programs lets customers turn an old working device into a discount, bill credit, or GCash payout.',
-    actionText: '',
-    icon: ''
-  },
+    title: 'Trade-in & Buy-back Programs',
+    shortDescription: 'Commercial device buy-backs offering trade-in discounts, postpaid bill credits, or digital cash payouts for old smartphones and gadgets.',
+    description: 'Commercial device buy-backs offering trade-in discounts, postpaid bill credits, or digital cash payouts for old smartphones and gadgets.',
+    actionText: 'Evaluate Solution →',
+    icon: 'Repeat',
+    currentStatus: 'Commercial trade-in and buy-back programs are actively operated in the Philippines by tech manufacturers (Samsung, Apple) and telecommunications providers (Globe, Smart) in partnership with reverse-commerce diagnostic vendors like CompAsia. Consumers can trade in older smartphones and tablets for store vouchers, new device discounts, or direct digital cash payouts (e.g., GCash).',
+    procedure: '1. Submission & On-site Assessment: The customer brings an existing smartphone or initiates trade-in via an online portal or retail store.\n2. Automated Diagnostic Testing: Technicians or diagnostic apps evaluate screen touch response, camera sensors, battery health, and cosmetic wear.\n3. Valuation & Incentive Credit: A residual trade-in value is calculated; the customer receives an instant purchase discount, postpaid bill credit, or GCash disbursement [7, 9].\n4. Data Sanitization & Processing: Devices undergo factory-grade multi-pass data wipes; viable units enter certified pre-owned channels, while non-functional units are harvested for spare components and material recycling.',
+    effect: 'Direct monetary incentives effectively overcome consumer inertia and device "hoarding in drawers", which accounts for over 70% of retired smartphones. Recovers high-grade components and scarce raw materials directly into the manufacturer supply chain [2, 9].',
+    assessment: {
+      sustainability: 'High circularity score. Closes the supply loop by keeping premium materials (cobalt, palladium, rare earths) in continuous industrial use, directly offsetting the environmental footprint of virgin mining.',
+      feasibility: 'Very high financial and commercial feasibility; self-sustaining and profitable for retail brands due to the robust secondary market for certified pre-owned devices.',
+      limitations: 'Exclusively accessible for relatively recent, high-value smartphones and tablets from major brands. Broken, obsolete, or unbranded low-end feature phones have near-zero trade-in value and are rejected, excluding lower-income consumers from participating.'
+    },
+    sources: 'Samsung Electronics Philippines Trade-In Terms (2024) [9]; Globe Telecom Trade-In Guide (2025) [7]; UN Global E-waste Monitor (2024) [2]; PEEC Initiative Research Report (2022-2026) [1]'
+  }
 ];
 
 export const DROP_OFF_LOCATIONS = [
