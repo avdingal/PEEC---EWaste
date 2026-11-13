@@ -5,6 +5,7 @@ import ScopeDefinition from './components/ScopeDefinition';
 import RootCauses from './components/RootCauses';
 import RealWorldImpacts from './components/RealWorldImpacts';
 import ActionDropOff from './components/ActionDropOff';
+import AdvocacySection from './components/AdvocacySection';
 import Footer from './components/Footer';
 import PledgeModal from './components/PledgeModal';
 
@@ -26,6 +27,7 @@ export default function App() {
         <RootCauses />
         <RealWorldImpacts />
         <ActionDropOff onOpenPledge={handleOpenPledge} />
+        <AdvocacySection onOpenPledge={handleOpenPledge} />
       </main>
 
       {/* Footer & Citations */}

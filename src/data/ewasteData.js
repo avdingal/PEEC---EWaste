@@ -1,3 +1,8 @@
+import moyskieTechImg from '../assets/actions/moyskie-tech.jpg';
+import sortedBoxImg from '../assets/actions/sorted-box.jpg';
+import diyPhoneImg from '../assets/actions/diy-phone.jpg';
+import diyLaptopImg from '../assets/actions/diy-laptop.jpg';
+
 export const METRICS_DATA = [
   {
     id: 'generated',
@@ -1332,3 +1337,104 @@ export const REFERENCES = [
     url: 'https://www.samsung.com/ph/info/mobile-trade-in-tnc',
   }
 ];
+
+export const ADVOCACY_TA_DATA = {
+  whyThisExists: [
+    {
+      title: 'Why we made it',
+      content: 'We made this page because e-waste is one of the fastest-growing waste problems in the Philippines, and most people never think about it. In 2022, the country produced about 537 million kg of e-waste, yet a lot of people still don’t know what to do with their old devices. So they end up forgotten in drawers or thrown out with the regular trash. We’re students who replace our own gadgets often, so we’re part of the problem too, and we figured we could be part of the fix.'
+    },
+    {
+      title: 'What it stands for',
+      content: 'It stands for bridging the gap between awareness and accessible infrastructure. Rather than just presenting alarming statistics, the campaign treats e-waste management as a shared responsibility across citizens, tech manufacturers, and local government units.'
+    }
+  ],
+  howWeEngage: [
+    {
+      title: 'Interactive Exploration',
+      description: 'You can click through the WEEE categories (6, 5, 2 and 1) and the real-world impacts: ecosystem hazards, fire hazards, human health risks and resource loss.'
+    },
+    {
+      title: 'Actionable Utility',
+      description: 'The E-Waste Drop-off Bin Locator lets you search by city or landmark across Luzon, Visayas and Mindanao. It shows places like SM Cyberzone, Globe Zero Hubs and Ayala Malls, with their hours, accepted items and map links.'
+    },
+    {
+      title: 'Commitment',
+      description: 'The “Pledge to Recycle” button asks visitors to commit to doing something, not only to read.'
+    }
+  ],
+  personalConclusions: [
+    {
+      lead: 'Youth and students carry the brunt:',
+      text: "As highlighted in our Demographic Vulnerability Spotlight, the 18-24 age bracket has the fastest device replacement rate. Rapid OS drop-offs and mandatory digital coursework force students into frequent hardware upgrades, turning functional phones into e-waste while straining students' budgets."
+    },
+    {
+      lead: 'Prevention works better than disposal.',
+      text: 'Out of the four solutions we compared, repair and refurbishing came out strongest, because they keep a device out of the waste stream in the first place.'
+    },
+    {
+      lead: 'Drop-off bins only help if the e-waste gets recycled properly.',
+      text: 'A bin in a mall is convenient, but only about 91 facilities are registered to handle e-waste. If collected items have nowhere to go, the bins don’t solve much.'
+    },
+    {
+      lead: 'Policy is the weakest part.',
+      text: 'The Philippines has no law written specifically for e-waste, and the e-waste shipments found in Subic show how hard enforcement is.'
+    }
+  ],
+  recommendations: {
+    improvements: [
+      {
+        category: 'Repair and refurbishing',
+        detail: 'Repair should cost less and be easier to find, and phones should be designed so they can actually be fixed.'
+      },
+      {
+        category: 'Drop-off bins',
+        detail: 'They should say where the e-waste ends up, label what each bin accepts, and exist outside Metro Manila too.'
+      },
+      {
+        category: 'Trade-in programs',
+        detail: 'Brands should resell or refurbish traded-in devices, so the program doesn’t just push people to buy a new one.'
+      },
+      {
+        category: 'Policy',
+        detail: 'The country needs a law made for e-waste that makes producers responsible for what they sell, with stricter checks on imports.'
+      }
+    ],
+    suggestions: [
+      'Ask schools, workplaces and brands to run their own e-waste programs.',
+      'Check the locator before throwing away any charger, cable or phone.'
+    ],
+    newSolutions: [
+      'E-waste collection drives on campus, run together with accredited recyclers.',
+      'Student repair days, where people can fix or revive old devices.',
+      'An easy way to donate or pass on devices that still work.'
+    ]
+  },
+  smallSteps: [
+    {
+      id: 'local-repair',
+      badge: 'Action 01 • Local Repair',
+      title: 'Battery Replacement at Moyskie Tech',
+      images: [moyskieTechImg],
+      story: 'As part of the small steps that we are actively taking, last year I visited Moyskie Tech Cellphone Repair Shop inside a Mall in Manila to get my iPhone’s battery replaced instead of buying a brand new phone. As stated on our website, smartphones belong to Category 6 of WEEE, and consumers often replace them every 2.5 years simply because of battery degradation or minor wear. By choosing to repair and extend the lifespan of my device at a local repair shop, I prevented a completely functional phone from becoming premature e-waste, saving both money and raw materials.'
+    },
+    {
+      id: 'ewaste-sorting',
+      badge: 'Action 02 • Proper Segregation',
+      title: 'Household E-Waste Sorting Box',
+      images: [sortedBoxImg],
+      story: 'I started sorting through my things and put my e-waste in a container. It has my old phone, cables, power bank and chargers in it. The next time I go to SM, I’ll drop them off at the e-waste bin so they get disposed of properly.'
+    },
+    {
+      id: 'diy-repair',
+      badge: 'Action 03 • DIY Refurbishing',
+      title: 'DIY Phone & Laptop Hardware Revival',
+      images: [diyPhoneImg, diyLaptopImg],
+      story: 'Refurbishing and DIY repair is one of the small steps I’m currently doing. Instead of throwing away my devices and buying new ones, I repair them. Since starting our advocacy, I’ve also offered to fix my family’s gadgets so the hassle of going to a repair shop won’t stop them from repairing. I was surprised by how accessible this is. There are free tutorials like iFixit guides and YouTube videos that give step-by-step instructions, so you don’t have to be a technician in order to fix your device. I also found that fixing or repairing things is fun, and it feels rewarding to bring a “dead” device back to life.'
+    }
+  ],
+  outro: {
+    quote: 'Every old charger in a drawer adds to a bigger problem. Take the pledge to repair, reuse and recycle your e-waste properly, and start with one device today.',
+    caption: 'Join our campus advocacy—commit to keeping functional electronics out of landfills.'
+  }
+};
