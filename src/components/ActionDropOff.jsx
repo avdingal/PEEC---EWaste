@@ -83,7 +83,7 @@ export default function ActionDropOff({ onOpenPledge }) {
           <div className="inline-flex items-center gap-2 mb-4">
             <span className="text-[#9E7B66] font-medium text-base">/</span>
             <span className="text-xs font-bold uppercase tracking-widest text-[#6B635B] bg-white/80 px-3 py-1 rounded-full border border-[#D8D3CA]">
-              04 — Take Action
+              04 — Solutions
             </span>
           </div>
 
